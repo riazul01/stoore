@@ -1,9 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 const App = () => {
-  return (
-    <div>
-      <h1 className="bg-green-500">Hello!</h1>
-    </div>
-  );
+  return <Outlet />;
 };
 
 export default App;
