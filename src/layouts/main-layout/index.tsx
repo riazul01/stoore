@@ -1,7 +1,13 @@
 import { PropsWithChildren } from "react";
+import Topbar from "./Topbar";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
-  return <div className="bg-green-800">{children}</div>;
+  return (
+    <>
+      <Topbar />
+      {children}
+    </>
+  );
 };
 
 export default MainLayout;
