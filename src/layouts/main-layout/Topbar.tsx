@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Topbar = () => {
   return (
-    <div className="h-auto w-full bg-[#153535] pt-3">
-      <div className="mx-auto flex max-w-[1420px] justify-between px-2 text-white">
+    <div className="w-full bg-[#153535]">
+      <div className="mx-auto flex max-w-[1420px] justify-between px-2 pt-3 text-white">
         <p className="hidden text-base font-medium lg:block">
           Need Help? Call Us:{" "}
           <span className="font-bold text-[orange]">+88 01234567890</span>
