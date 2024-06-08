@@ -6,7 +6,7 @@ const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Topbar />
-      <Header/>
+      <Header />
       {children}
     </>
   );

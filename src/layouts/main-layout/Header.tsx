@@ -7,17 +7,13 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      {/* header */}
       <div className="sticky top-0 z-50 w-full bg-[#153535]">
-        <div className="mx-[auto] flex max-w-[1420px] items-center justify-between px-[0.4rem] py-[1.2rem] sm:py-[1.6rem]">
-          {/* logo */}
+        <div className="mx-auto flex max-w-[1420px] items-center justify-between px-2 py-6">
           <Link to="/" className="font-croissant text-[2rem] text-[orange]">
             Grocery
           </Link>
 
-          {/* search bar */}
           <div className="flex h-11 items-center justify-center overflow-hidden rounded-lg">
-            {/* select category */}
             <select
               name="category"
               className="w-35 h-full rounded-l-lg border-2 border-[#214445] bg-[#153535] pl-2.5 text-lg text-white outline-none"
@@ -27,7 +23,6 @@ const Header = () => {
               <option value="beverages">Beverages</option>
             </select>
 
-            {/* search input */}
             <input
               name="searchText"
               className="h-full w-[22rem] border-y-2 border-[#214445] bg-transparent pl-4 text-lg text-white outline-none"
@@ -35,24 +30,21 @@ const Header = () => {
               placeholder="Search products..."
             />
 
-            {/* search button */}
             <div className="flex h-full w-14 cursor-pointer items-center justify-center bg-[#214445]">
               <BiSearchAlt className="text-[1.625rem] text-white" />
             </div>
           </div>
 
-          {/* working hours */}
           <div className="flex items-center gap-3">
             <LuClock4 className="text-xl text-white" />
             <div className="">
-              <p className="text-4 font-semibold text-white">
+              <p className="text-base font-semibold text-white">
                 Sunday - Thursday
               </p>
-              <p className="text-4 text-white">9:00 AM - 10:00 PM</p>
+              <p className="text-base text-white">9:00 AM - 10:00 PM</p>
             </div>
           </div>
 
-          {/* icon links */}
           <div className="flex items-center gap-5">
             <a href="tel:+8801234567890">
               <FiPhoneCall className="cursor-pointer text-2xl text-[orange]" />
