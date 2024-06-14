@@ -1,5 +1,9 @@
+import Categories from "components/sections/home/categories";
+
 const Home = () => {
-  return <h1 className="text-green-300">Home</h1>;
+  return <>
+    <Categories/>
+  </>;
 };
 
 export default Home;

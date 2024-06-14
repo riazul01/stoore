@@ -18,8 +18,8 @@ const MainLayout = ({ children }: PropsWithChildren) => {
       </div>
       <div className="mx-auto max-w-[1420px] px-2">
         <Navbar />
+        {children}
       </div>
-      {children}
     </>
   );
 };
