@@ -27,7 +27,7 @@ export default {
   biscuits: `/${parentPaths.beverages}/biscuits`,
   cakes: `/${parentPaths.beverages}/cakes`,
   breads: `/${parentPaths.beverages}/breads`,
-  topProducts: `/${parentPaths.trending}/top-products`,
+  topSelling: `/${parentPaths.trending}/top-selling`,
   recentProducts: `/${parentPaths.trending}/recent-products`,
   popularNow: `/${parentPaths.trending}/popular-now`,
   offers: `/${rootPaths.pageRoot}/offers`,

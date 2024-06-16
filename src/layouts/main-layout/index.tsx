@@ -2,6 +2,8 @@ import { PropsWithChildren } from "react";
 import Topbar from "./Topbar";
 import Header from "./Header";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -16,10 +18,12 @@ const MainLayout = ({ children }: PropsWithChildren) => {
           <Header />
         </div>
       </div>
+      <Sidebar/>
       <div className="mx-auto max-w-[1420px] px-2">
         <Navbar />
         {children}
       </div>
+      <Footer/>
     </>
   );
 };
