@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import Topbar from "./Topbar";
 import Header from "./Header";
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 

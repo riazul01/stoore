@@ -1,4 +1,4 @@
-import paths, { rootPaths, parentPaths } from "./paths";
+import paths, { rootPaths, parentPaths } from "routes/paths";
 
 export interface SubMenuItem {
   name: string;
@@ -18,7 +18,7 @@ export interface MenuItem {
   items?: SubMenuItem[];
 }
 
-const sitemap: MenuItem[] = [
+const navItems: MenuItem[] = [
   {
     id: "home",
     subheader: "Home",
@@ -120,4 +120,4 @@ const sitemap: MenuItem[] = [
   },
 ];
 
-export default sitemap;
+export default navItems;
