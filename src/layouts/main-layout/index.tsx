@@ -23,7 +23,11 @@ const MainLayout = ({ children }: PropsWithChildren) => {
         <Navbar />
         {children}
       </div>
-      <Footer/>
+      <div className="w-full bg-[#122829]">
+        <div className="mx-auto max-w-[1420px] px-2">
+          <Footer/>
+        </div>
+      </div>
     </>
   );
 };
