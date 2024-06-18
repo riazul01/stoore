@@ -37,27 +37,27 @@ const ProductCard = ({ product }: ProductProps) => {
           </del>
         </p>
         {!active && (
-          <button className="absolute bottom-0 left-0 z-40 flex w-full items-center justify-center gap-1 rounded-sm bg-[#153535] py-2 text-[1.1rem] font-medium text-[orange] outline-none">
+          <button className="absolute bottom-0 left-0 z-40 flex w-full items-center justify-center gap-1 rounded-sm bg-[#153535] h-10 text-[1.1rem] font-medium text-[orange] outline-none">
             <BsLightningFill />
             <span>Add To Cart</span>
           </button>
         )}
-        <div className="absolute bottom-0 right-0 flex w-full items-end justify-between gap-3">
-          <button className="flex-grow rounded-sm bg-[#153535] py-2 text-[1.1rem] font-medium text-[orange] outline-none">
+        {active && <div className="absolute bottom-0 right-0 flex w-full items-end justify-between gap-3">
+          <button className="flex-grow rounded-sm bg-[#153535] h-10 text-[1.1rem] font-medium text-[orange] outline-none">
             Added
           </button>
-          <div className="flex h-[2.65rem] items-center justify-center rounded-sm border-2 border-[#153535]">
+          <div className="flex h-10 items-center justify-center rounded-sm bg-[#eee]">
             <button className="flex h-full w-10 items-center justify-center rounded-sm border-none outline-none">
               <HiMinus className="text-[1.2rem] text-[#153535]" />
             </button>
-            <span className="flex h-full w-11 items-center justify-center border-x-2 border-[#153535] text-center text-[1.2rem] font-bold text-[#153535]">
+            <span className="flex h-full w-11 items-center justify-center border-x border-[#ccc] text-center text-[1.2rem] font-bold text-[#153535]">
               1
             </span>
             <button className="flex h-full w-10 items-center justify-center rounded-sm border-none outline-none">
               <HiPlus className="text-[1.2rem] text-[#153535]" />
             </button>
           </div>
-        </div>
+        </div>}
       </div>
 
       <p className="box-shadow-md absolute left-0 top-5 rounded-r-[0.1rem] bg-[orange] px-3 py-1 text-[1.1rem] font-bold">
