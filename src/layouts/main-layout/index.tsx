@@ -2,8 +2,9 @@ import { PropsWithChildren } from "react";
 import Topbar from "./Topbar";
 import Header from "./Header";
 import Navbar from "./navbar";
-import Footer from "./Footer";
+import Footer from "./footer";
 import Sidebar from "./Sidebar";
+import Copyright from "./footer/Copyright";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -18,14 +19,15 @@ const MainLayout = ({ children }: PropsWithChildren) => {
           <Header />
         </div>
       </div>
-      <Sidebar/>
+      <Sidebar />
       <div className="mx-auto max-w-[1420px] px-2">
         <Navbar />
         {children}
       </div>
       <div className="w-full bg-[#122829]">
         <div className="mx-auto max-w-[1420px] px-2">
-          <Footer/>
+          <Footer />
+          <Copyright />
         </div>
       </div>
     </>

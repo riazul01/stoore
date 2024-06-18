@@ -8,7 +8,6 @@ import GooglePalyBadge from "assets/images/badges/google-play.png";
 
 const Footer = () => {
   return (
-    <>
       <div className="flex flex-wrap justify-between py-8">
         <div className="w-full md:w-[50%] lg:w-[40%] xl:w-[28%] xl:pr-6">
           <h1 className="font-croissant text-3xl text-[orange]">Grocery</h1>
@@ -123,25 +122,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* copyright section */}
-      <div className="w-full border-t-[1px] border-[#153535]">
-        <div className="mx-[auto] flex max-w-[1420px] items-center justify-center px-[0.4rem] py-[1.4rem]">
-          <p className="text-[0.8rem] text-[#fff] lg:text-[1.1rem]">
-            Created by{" "}
-            <a
-              className="text-[orange]"
-              href="https://github.com/riazul01"
-              target="_blank"
-              rel="noreferrer"
-            >
-              riazul01
-            </a>{" "}
-            | &copy; 2024 - All Rights Reserved
-          </p>
-        </div>
-      </div>
-    </>
   );
 };
 
