@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
+import { Product } from "data/products";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import ProductCard from "components/common/ProductCard";
-import { Product } from "data/products";
 
 interface SectionProductsProps {
   title: string;
-  products: Product[];
   link: string;
+  products: Product[];
 }
 
 const SectionProducts = ({ title, products, link }: SectionProductsProps) => {
   return (
-    <div className="mx-auto max-w-[1420px] pb-[4rem]">
+    <div className="mx-auto max-w-[1420px] pb-16">
       <div className="flex items-center justify-between py-[1.2rem]">
-        <h1 className="text-[1.4rem] font-bold capitalize">{title}</h1>
+        <h1 className="text-xl font-bold capitalize">{title}</h1>
         <Link to={link} className="flex items-center">
-          <p className="text-[1rem] font-bold text-[green]">View more</p>
-          <MdKeyboardDoubleArrowRight className="ms-[0.4rem] text-[1.2rem] font-bold text-[green]" />
+          <p className="text-base font-bold text-[green]">View more</p>
+          <MdKeyboardDoubleArrowRight className="ms-2 text-lg font-bold text-[green]" />
         </Link>
       </div>
 

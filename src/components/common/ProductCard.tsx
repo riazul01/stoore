@@ -7,9 +7,9 @@ interface ProductProps {
   product: Product;
 }
 
-const ProductCard = ({product}: ProductProps) => {
+const ProductCard = ({ product }: ProductProps) => {
   return (
-    <div className="relative h-[360px] w-full max-w-[280px] overflow-hidden rounded-md border-[1px] border-gray-200 p-[0.2rem] shadow-lg">
+    <div className="relative h-[360px] w-full max-w-[280px] overflow-hidden rounded-md border border-gray-200 p-[0.2rem] shadow-lg">
       <div className="relative h-[55%] w-full cursor-pointer overflow-hidden rounded-sm">
         <img
           src={product.image}
@@ -17,23 +17,25 @@ const ProductCard = ({product}: ProductProps) => {
           alt="product_image"
         />
         <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-[#23232380] opacity-0 transition-all duration-300 ease-in-out hover:opacity-100">
-          <p className="text-xl text-[#fff]">View Details</p>
+          <p className="text-xl text-white">View Details</p>
         </div>
       </div>
 
       {/* product desc */}
-      <div className="relative h-[45%] w-full pl-[0.6rem] pt-[0.6rem]">
-        <h1 className="text-[1.2rem] font-bold text-[#0c2a2b]">{product.name}</h1>
-        <p className="pt-[0.5rem] text-[1rem] font-[500]">{product.weight} {product.unit}</p>
-        <p className="pt-[0.5rem]">
-          <del className="mr-[0.4rem] text-[1.1rem] font-bold text-[#888]">
-            ${product.price}
-          </del>
-          <ins className="text-[1.1rem] font-bold text-[#0c2a2b] no-underline">
+      <div className="relative h-[45%] w-full p-2">
+        <h1 className="text-lg font-bold text-[#0c2a2b]">{product.name}</h1>
+        <p className="pt-2 text-base font-medium">
+          {product.weight} {product.unit}
+        </p>
+        <p className="pt-2">
+          <ins className="mr-1.5 text-[1.1rem] font-bold text-[#0c2a2b] no-underline">
             ${product.price}
           </ins>
+          <del className="text-[1.1rem] font-bold text-[#888]">
+            ${product.price}
+          </del>
         </p>
-        <button className="absolute bottom-0 left-0 z-40 flex w-full items-center justify-center gap-1 rounded-sm bg-[#153535] py-[0.4rem] text-[1.1rem] font-[500] text-[orange] outline-none">
+        <button className="absolute bottom-0 left-0 z-40 flex w-full items-center justify-center gap-1 rounded-sm bg-[#153535] py-2 text-[1.1rem] font-medium text-[orange] outline-none">
           <BsLightningFill />
           <span>Add To Cart</span>
         </button>
@@ -45,8 +47,8 @@ const ProductCard = ({product}: ProductProps) => {
       </div>
 
       <p
-        className="absolute left-0 top-5 rounded-r-[0.1rem] bg-[orange] px-[0.8rem] py-[0.2rem] text-[1.1rem] font-bold"
-        style={{ boxShadow: "0.015rem 0.015rem 0.4rem 0 #444" }}
+        className="absolute left-0 top-5 rounded-r-[0.1rem] bg-[orange] px-3 py-1 text-[1.1rem] font-bold"
+        style={{ boxShadow: "0.015rem 0.015rem 0.5rem 0 #222" }}
       >
         10% off
       </p>
