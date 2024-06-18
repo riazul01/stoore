@@ -31,7 +31,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 2,
     category: 'vegetable',
     name: "Cabbage",
     price: 40,
@@ -44,7 +44,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 2,
+    id: 3,
     category: 'vegetable',
     name: "Broccoli",
     price: 60,
@@ -57,7 +57,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 4,
     category: 'vegetable',
     name: "Carrot",
     price: 70,
@@ -70,7 +70,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 7,
+    id: 5,
     category: 'vegetable',
     name: "Motorshuti",
     price: 120,
@@ -83,7 +83,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 6,
     name: "Chicken Egg",
     price: 120,
     weight: 1,
@@ -95,7 +95,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 4,
+    id: 7,
     name: "Capsicum",
     price: 120,
     weight: 1,
@@ -107,7 +107,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 8,
     category: 'fruit',
     name: "Pomegranate",
     price: 160,
@@ -120,7 +120,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 9,
     name: "Kiwi",
     price: 120,
     weight: 1,
@@ -132,7 +132,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 10,
     name: "Chocolate Cake",
     price: 120,
     weight: 1,
@@ -144,7 +144,7 @@ export const products: Product[] = [
     topSelling: true,
   },
   {
-    id: 3,
+    id: 11,
     name: "Potato",
     price: 120,
     weight: 1,
@@ -156,7 +156,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 8,
+    id: 12,
     name: "Peas",
     price: 120,
     weight: 1,
@@ -168,7 +168,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 13,
     category: 'fruit',
     name: "Orange",
     price: 150,
@@ -181,7 +181,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 14,
     category: 'fruit',
     name: "Strawberry",
     price: 150,
@@ -194,7 +194,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 6,
+    id: 15,
     name: "Long Bean",
     price: 120,
     weight: 1,
@@ -206,7 +206,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 16,
     name: "Butter Cake",
     price: 120,
     weight: 1,
@@ -218,7 +218,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 17,
     name: "Fruit Cupcake",
     price: 120,
     weight: 1,
@@ -230,7 +230,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 18,
     name: "Milk Cupcake",
     price: 120,
     weight: 1,
@@ -242,7 +242,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 19,
     name: "White Bread",
     price: 120,
     weight: 1,
@@ -254,7 +254,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 20,
     name: "Chiabatta",
     price: 120,
     weight: 1,
@@ -266,7 +266,7 @@ export const products: Product[] = [
     recentProduct: true,
   },
   {
-    id: 3,
+    id: 21,
     name: "Tea Leaves",
     price: 120,
     weight: 1,
@@ -278,7 +278,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 22,
     name: "Coffe",
     price: 120,
     weight: 1,
@@ -290,7 +290,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 23,
     name: "Koyel Egg",
     price: 120,
     weight: 1,
@@ -302,7 +302,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 24,
     name: "Chocolate Buiscuit",
     price: 120,
     weight: 1,
@@ -314,7 +314,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 25,
     name: "Milkchip Cookie",
     price: 120,
     weight: 1,
@@ -326,7 +326,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 26,
     name: "Orange Cake",
     price: 120,
     weight: 1,
@@ -338,7 +338,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 27,
     name: "Shortcake Biscuit",
     price: 120,
     weight: 1,
@@ -350,7 +350,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 4,
+    id: 28,
     name: "Red Capsicum",
     price: 120,
     weight: 1,
@@ -362,7 +362,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 29,
     name: "Tomato",
     price: 120,
     weight: 1,
@@ -374,7 +374,7 @@ export const products: Product[] = [
     popularNow: true,
   },
   {
-    id: 3,
+    id: 30,
     name: "Peach",
     price: 120,
     weight: 1,

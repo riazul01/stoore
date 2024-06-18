@@ -1,13 +1,44 @@
 import { HiPlus, HiMinus } from "react-icons/hi";
 import { BsLightningFill } from "react-icons/bs";
 import { Product } from "data/products";
+import { useContext } from "react";
+import { CartContext } from "context/CartContextProvider";
 
 interface ProductProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductProps) => {
-  const active = true;
+  const { state, dispatch } = useContext(CartContext)!;
+
+  const cartItem = state.cartItems.find((elem) => elem.id === product.id);
+  const addedToCart = cartItem !== undefined ? true : false;
+
+  const handleAddToCart = () => {
+    dispatch({ type: "ADD_PRODUCT", payload: { ...product, quantity: 1 } });
+  };
+
+  const handleIncrement = () => {
+    if (cartItem) {
+      dispatch({
+        type: "CONTROL_QUANTITY",
+        payload: { ...product, quantity: cartItem.quantity + 1 },
+      });
+    }
+  };
+
+  const handleDecrement = () => {
+    if (cartItem) {
+      if (cartItem.quantity <= 1) {
+        dispatch({ type: "REMOVE_PRODUCT", payload: cartItem });
+      } else {
+        dispatch({
+          type: "CONTROL_QUANTITY",
+          payload: { ...product, quantity: cartItem.quantity - 1 },
+        });
+      }
+    }
+  };
 
   return (
     <div className="relative h-[360px] w-full max-w-[280px] overflow-hidden rounded-md border border-gray-200 p-[0.2rem] shadow-lg">
@@ -36,28 +67,39 @@ const ProductCard = ({ product }: ProductProps) => {
             ${product.price}
           </del>
         </p>
-        {!active && (
-          <button className="absolute bottom-0 left-0 z-40 flex w-full items-center justify-center gap-1 rounded-sm bg-[#153535] h-10 text-[1.1rem] font-medium text-[orange] outline-none">
+
+        {!addedToCart ? (
+          <button
+            onClick={handleAddToCart}
+            className="absolute bottom-0 left-0 z-40 flex h-10 w-full items-center justify-center gap-1 rounded-sm bg-[#153535] text-[1.1rem] font-medium text-[orange] outline-none"
+          >
             <BsLightningFill />
             <span>Add To Cart</span>
           </button>
-        )}
-        {active && <div className="absolute bottom-0 right-0 flex w-full items-end justify-between gap-3">
-          <button className="flex-grow rounded-sm bg-[#153535] h-10 text-[1.1rem] font-medium text-[orange] outline-none">
-            Added
-          </button>
-          <div className="flex h-10 items-center justify-center rounded-sm bg-[#eee]">
-            <button className="flex h-full w-10 items-center justify-center rounded-sm border-none outline-none">
-              <HiMinus className="text-[1.2rem] text-[#153535]" />
+        ) : (
+          <div className="absolute bottom-0 right-0 flex w-full items-end justify-between gap-3">
+            <button className="h-10 flex-grow rounded-sm bg-[#153535] text-[1.1rem] font-medium text-[orange] outline-none">
+              Added
             </button>
-            <span className="flex h-full w-11 items-center justify-center border-x border-[#ccc] text-center text-[1.2rem] font-bold text-[#153535]">
-              1
-            </span>
-            <button className="flex h-full w-10 items-center justify-center rounded-sm border-none outline-none">
-              <HiPlus className="text-[1.2rem] text-[#153535]" />
-            </button>
+            <div className="flex h-10 items-center justify-center rounded-sm bg-[#eee]">
+              <button
+                onClick={handleDecrement}
+                className="flex h-full w-10 items-center justify-center rounded-sm border-none outline-none"
+              >
+                <HiMinus className="text-[1.2rem] text-[#153535]" />
+              </button>
+              <span className="flex h-full w-11 items-center justify-center border-x border-[#ccc] text-center text-[1.2rem] font-bold text-[#153535]">
+                {cartItem?.quantity}
+              </span>
+              <button
+                onClick={handleIncrement}
+                className="flex h-full w-10 items-center justify-center rounded-sm border-none outline-none"
+              >
+                <HiPlus className="text-[1.2rem] text-[#153535]" />
+              </button>
+            </div>
           </div>
-        </div>}
+        )}
       </div>
 
       <p className="box-shadow-md absolute left-0 top-5 rounded-r-[0.1rem] bg-[orange] px-3 py-1 text-[1.1rem] font-bold">
