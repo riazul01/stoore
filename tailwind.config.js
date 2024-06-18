@@ -7,5 +7,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme,
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".box-shadow-md": {
+          boxShadow: "0.015rem 0.015rem 0.5rem 0 #222"
+        }
+      })
+    }
+  ],
 }
