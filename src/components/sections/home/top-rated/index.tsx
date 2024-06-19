@@ -9,8 +9,8 @@ const TopRated = () => {
   return (
     <div className="w-full">
       <h1 className="text-xl font-bold">Top Rated</h1>
-      <div className="flex flex-col gap-3 py-3">
-        {topProducts.map((product) => {
+      <div className="flex flex-col gap-4 py-3">
+        {topProducts.slice(0, 6).map((product) => {
           return (
             <div className="flex gap-3">
               <div className="relative h-24 w-32 overflow-hidden rounded-sm">
@@ -24,7 +24,7 @@ const TopRated = () => {
                 </p>
               </div>
               <div className="-mt-0.5">
-                <h3 className="text-base font-bold text-[#153535]">{product.name}</h3>
+                <Link to={'#!'} className="text-base font-bold text-[#153535]">{product.name}</Link>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }, (_, index) => (
                     <FaStar key={index} className={`${index >= Math.round(product.rating) ? 'text-gray-300': 'text-[orange]'} text-base`} />
@@ -39,7 +39,7 @@ const TopRated = () => {
                     ${product.price}
                   </del>
                 </p>
-                <Link to={"#!"} className="text-base">View details</Link>
+                <p className="mt-0.5 text-sm text-[#333] font-semibold">In Stock</p>
               </div>
             </div>
           );

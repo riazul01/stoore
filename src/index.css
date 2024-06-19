@@ -6,15 +6,22 @@
 
 .slick-arrow.slick-prev,
 .slick-arrow.slick-next {
-  height: 50px;
-  width: 50px;
+  height: 44px;
+  width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
-  border: 1px solid #ddd;
   border-radius: 50%;
+  border: 1px solid #ddd;
   z-index: 9;
+}
+
+.slick-arrow.slick-prev {
+  left: -22px;
+}
+.slick-arrow.slick-next {
+  right: -22px;
 }
 
 .slick-arrow.slick-prev:hover,

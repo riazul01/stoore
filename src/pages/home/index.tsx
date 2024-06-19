@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <>
       <Categories />
-      <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-3">
+      <div className="grid grid-cols-12">
+        <div className="col-span-3 mr-4">
           <TopRated />
         </div>
         <div className="col-span-9">
@@ -26,6 +26,16 @@ const Home = () => {
             title="Top Products"
             link={paths.topSelling}
             products={topProducts}
+          />
+          <ProductSlider
+            title="Recent Products"
+            link={paths.topSelling}
+            products={recentProducts}
+          />
+          <ProductSlider
+            title="Popular now"
+            link={paths.topSelling}
+            products={popularProducts}
           />
           <DealsOfTheWeek />
         </div>

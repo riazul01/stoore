@@ -25,7 +25,7 @@ const NextBtn = ({ className, onClick }: NextBtnProps) => {
 
   return (
     <div className={className} onClick={onClick}>
-      <MdArrowForwardIos className="text-xl text-[#153535]" />
+      <MdArrowForwardIos className="text-lg text-[#153535]" />
     </div>
   );
 };

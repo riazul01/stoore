@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NextBtn from "./slider-btns/NextBtn";
 import PrevBtn from "./slider-btns/PrevBtn";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 interface SectionProductsProps {
   title: string;
@@ -47,12 +48,15 @@ const ProductSlider = ({ title, products, link }: SectionProductsProps) => {
   return (
     <div className="pb-16">
       <div className="">
-        <div className="flex items-center justify-between pb-[1.2rem]">
+        <div className="flex items-center justify-between pb-4">
           <h1 className="text-xl font-bold capitalize">{title}</h1>
-          <Link to={link} className="rounded-md border border-gray-600 px-2.5 py-0.5 text-base font-semibold text-[#222]">View all</Link>
+          <Link to={link} className=" flex items-center gap-1.5">
+            <p className="text-base font-semibold text-[#333]">View all</p>
+            <FaArrowRightLong className="text-[#333]"/>
+          </Link>
         </div>
 
-        <Slider {...settings} className="border border-b-0 border-[silver]">
+        <Slider {...settings} className="border border-b-0 border-e-0 border-[silver]">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

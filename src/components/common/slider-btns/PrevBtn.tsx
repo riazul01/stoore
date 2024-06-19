@@ -25,7 +25,7 @@ const PrevBtn = ({ className, onClick }: PrevBtnProps) => {
 
   return (
     <div className={className} onClick={onClick}>
-      <MdArrowBackIosNew className="text-xl text-[#153535]" />
+      <MdArrowBackIosNew className="text-lg text-[#153535]" />
     </div>
   );
 };
