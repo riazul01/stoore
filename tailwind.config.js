@@ -12,7 +12,7 @@ export default {
       addUtilities({
         ".box-shadow-md": {
           boxShadow: "0.015rem 0.015rem 0.5rem 0 #222"
-        }
+        },
       })
     }
   ],

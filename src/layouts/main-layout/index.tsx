@@ -4,7 +4,6 @@ import Header from "./Header";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Sidebar from "./Sidebar";
-import Copyright from "./footer/Copyright";
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -27,7 +26,6 @@ const MainLayout = ({ children }: PropsWithChildren) => {
       <div className="w-full bg-[#122829]">
         <div className="mx-auto max-w-[1420px] px-2">
           <Footer />
-          <Copyright />
         </div>
       </div>
     </>

@@ -9,7 +9,7 @@ export interface Product {
   unit: string;
   inStock: number;
   discount: number | string;
-  rating: number | string;
+  rating: number;
   image: string;
   topSelling?: boolean;
   recentProduct?: boolean;

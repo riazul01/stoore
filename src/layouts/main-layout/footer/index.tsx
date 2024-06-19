@@ -5,9 +5,14 @@ import { FiPhoneCall } from "react-icons/fi";
 import footerItems from "data/footerItems";
 import AppStoreBadge from "assets/images/badges/app-store.png";
 import GooglePalyBadge from "assets/images/badges/google-play.png";
+import Services from "./Services";
+import Copyright from "./Copyright";
 
 const Footer = () => {
   return (
+    <>
+      <Services />
+
       <div className="flex flex-wrap justify-between py-8">
         <div className="w-full md:w-[50%] lg:w-[40%] xl:w-[28%] xl:pr-6">
           <h1 className="font-croissant text-3xl text-[orange]">Grocery</h1>
@@ -105,7 +110,7 @@ const Footer = () => {
           <p className="mt-5 text-xs font-semibold uppercase text-[#ddd]">
             Follow us
           </p>
-          <div className="mt-2 flex items-center gap-2">
+          <div className="mt-2.5 flex items-center gap-2">
             {footerItems.socialLinks.items.map((item) => {
               return (
                 <a
@@ -122,6 +127,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <Copyright />
+    </>
   );
 };
 

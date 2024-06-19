@@ -11,19 +11,24 @@ interface SectionProductsProps {
 
 const SectionProducts = ({ title, products, link }: SectionProductsProps) => {
   return (
-    <div className="mx-auto max-w-[1420px] pb-16">
-      <div className="flex items-center justify-between py-[1.2rem]">
-        <h1 className="text-xl font-bold capitalize">{title}</h1>
-        <Link to={link} className="flex items-center">
-          <p className="text-base font-bold text-[green]">View more</p>
-          <MdKeyboardDoubleArrowRight className="ms-2 text-lg font-bold text-[green]" />
-        </Link>
+    <div className="grid grid-cols-12 gap-4 pb-16">
+      <div className="col-span-3 h-[420px] w-full rounded-md bg-[#c1ff72]">
+        <p>Top Products</p>
       </div>
+      <div className="col-span-9 bg-gray-50">
+        <div className="flex items-center justify-between pb-[1.2rem]">
+          <h1 className="text-xl font-bold capitalize">{title}</h1>
+          <Link to={link} className="flex items-center">
+            <p className="text-base font-bold text-[green]">View more</p>
+            <MdKeyboardDoubleArrowRight className="ms-2 text-lg font-bold text-[green]" />
+          </Link>
+        </div>
 
-      <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
