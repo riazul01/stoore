@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { ProductsContext } from "context/ProductsContextProvider";
-// import SectionProducts from "components/common/SectionProducts";
 import Categories from "components/common/categories";
-// import paths from "routes/paths";
+import paths from "routes/paths";
 import TopRated from "components/sections/home/top-rated";
 import DealsOfTheWeek from "components/sections/home/deals-of-the-week";
+import ProductSlider from "components/common/ProductSlider";
 
 const Home = () => {
   const { topProducts, recentProducts, popularProducts } =
@@ -22,6 +22,11 @@ const Home = () => {
           <TopRated />
         </div>
         <div className="col-span-9">
+          <ProductSlider
+            title="Top Products"
+            link={paths.topSelling}
+            products={topProducts}
+          />
           <DealsOfTheWeek />
         </div>
       </div>

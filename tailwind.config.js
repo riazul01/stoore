@@ -10,6 +10,9 @@ export default {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
+        ".box-shadow-sm": {
+          boxShadow: "0.01rem 0.01rem 0.5rem 0 #888"
+        },
         ".box-shadow-md": {
           boxShadow: "0.015rem 0.015rem 0.5rem 0 #222"
         },

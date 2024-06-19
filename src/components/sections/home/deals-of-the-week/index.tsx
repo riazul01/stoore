@@ -1,7 +1,6 @@
 import { ProductsContext } from "context/ProductsContextProvider";
 import { useContext } from "react";
-import DiscountProduct from "./DiscountProduct";
-
+import ProductCard from "components/common/ProductCard";
 
 const DealsOfTheWeek = () => {
     const { products } = useContext(ProductsContext)!;
@@ -34,7 +33,7 @@ const DealsOfTheWeek = () => {
       </div>
       <div className="mt-4 grid grid-cols-4 border border-b-0 border-e-0 border-[silver]">
         {products.slice(0, 12).map((product) => (
-          <DiscountProduct key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>

@@ -41,7 +41,7 @@ const ProductCard = ({ product }: ProductProps) => {
   };
 
   return (
-    <div className="relative h-[360px] w-full max-w-[280px] overflow-hidden rounded-md border border-gray-200 p-[0.2rem] shadow-lg">
+    <div className="relative h-[360px] w-full overflow-hidden border border-s-0 border-t-0 border-[silver] p-[0.2rem]">
       <div className="relative h-[55%] w-full cursor-pointer overflow-hidden rounded-sm">
         <img
           src={product.image}
