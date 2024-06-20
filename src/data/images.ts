@@ -57,6 +57,12 @@ import orangeCake from "assets/images/bakery/orange-cake.jpg";
 import shortcakeBiscuit from "assets/images/bakery/shortcake-biscuit.jpg";
 import whiteBread from "assets/images/bakery/white-bread.jpg";
 
+// blog
+import blogImg1 from "assets/images/blogs/blog_img_01.jpg";
+import blogImg2 from "assets/images/blogs/blog_img_02.jpg";
+import blogImg3 from "assets/images/blogs/blog_img_03.jpg";
+import blogImg4 from "assets/images/blogs/blog_img_04.jpg";
+
 const images = {
   vegetables,
   fruits,
@@ -105,6 +111,10 @@ const images = {
   orangeCake,
   shortcakeBiscuit,
   whiteBread,
+  blogImg1,
+  blogImg2,
+  blogImg3,
+  blogImg4,
 };
 
 export default images;

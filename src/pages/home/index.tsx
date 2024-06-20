@@ -5,6 +5,7 @@ import paths from "routes/paths";
 import TopRated from "components/sections/home/top-rated";
 import DealsOfTheWeek from "components/sections/home/deals-of-the-week";
 import ProductSlider from "components/common/ProductSlider";
+import LatestBlogs from "components/sections/home/latest-blogs";
 
 const Home = () => {
   const { topProducts, recentProducts, popularProducts } =
@@ -17,7 +18,7 @@ const Home = () => {
   return (
     <>
       <Categories />
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-12 pb-20">
         <div className="col-span-3 mr-4">
           <TopRated />
         </div>
@@ -40,25 +41,7 @@ const Home = () => {
           <DealsOfTheWeek />
         </div>
       </div>
-      {/* <SectionProducts
-        title="Top Products"
-        link={paths.topSelling}
-        products={topProducts}
-      />
-      <SectionProducts
-        title="Recent Products"
-        link={paths.topSelling}
-        products={recentProducts}
-      />
-      <SectionProducts
-        title="Popular now"
-        link={paths.topSelling}
-        products={popularProducts}
-      /> */}
-      <div className="grid grid-cols-12">
-        <div className="col-span-3"></div>
-        <div className="col-span-9"></div>
-      </div>
+      <LatestBlogs/>
     </>
   );
 };
